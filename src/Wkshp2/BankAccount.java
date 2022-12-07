@@ -7,6 +7,31 @@ public class BankAccount {
   private String email;
   private String phoneNumber;
 
+  //constructor overload & chainning
+
+  public BankAccount(){
+    this("nil", "no name", "no email", "no phoneNumber", 0);
+    System.out.println("Add details");
+  }
+
+
+  public BankAccount(String accountNumber, String customerName, String email, String phoneNumber, double balance){
+    this.accountNumber = accountNumber;
+    this.customerName = customerName;
+    this.balance = balance;
+    this.email = email;
+    this.phoneNumber = phoneNumber;
+    System.out.println("Need Details");
+  }
+
+
+  public BankAccount(String customerName, String email, String phoneNumber) {
+    this("11111", customerName, email, phoneNumber, 11111);
+    // this.customerName = customerName;
+    // this.email = email;
+    // this.phoneNumber = phoneNumber;
+  }
+
 
   public String getAccountNumber() {
     return this.accountNumber;
