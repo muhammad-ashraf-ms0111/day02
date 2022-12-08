@@ -1,4 +1,4 @@
-package models;
+package Car;
 
 import java.util.Date;
 
@@ -24,6 +24,16 @@ public class Car {
         this.registration = registration;
         this.colour = colour;
         this.make = make;
+    }
+
+
+    @Override
+    public String toString() {
+        return "[" +
+            " colour='" + getColour() + "'" +
+            ", make='" + getMake() + "'" +
+            ", registration='" + getRegistration() + "'" +
+            "]";
     }
 
     // Access methods to our members
